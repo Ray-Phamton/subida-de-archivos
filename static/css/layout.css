@@ -1,0 +1,65 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(10, 15, 20);
+    padding: 2rem;
+}
+
+.container {
+    background: rgb(7,10,15);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: white;
+}
+
+input[type="file"] {
+    display: none
+}
+
+.custom-file-label{
+    background-color: rgb(27,0,58);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-label:hover{
+    background-color: rgb(27,0,58);
+}
+
+button {
+    background-color: rgb(27,0,58);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.result, .error, .preview {
+    margin-top: 2rem;
+}
+
+ul {
+    color: white;
+    padding-left: 1rem;
+}
+
+#file-name{
+    font-style: italic;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: white;
+    color: #555;
+}

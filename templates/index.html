@@ -1,0 +1,38 @@
+{% extends './layout.html' %}
+
+{% block title %}Subir Archivo{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Sube un archivo</h1>
+        <form method="post" enctype="multipart/form-data">
+            <label for="file-upload" class="custom-file-label">selecciona un archivo</label>
+            <input id="file-upload" type="file" name="file" accept=".txt,.html,.py,.css,.jpg,.jpeg,.png" required>
+            <span id="file-name">Ningun archivo seleccionado</span>
+            <button type="submit">Subir</button>
+        </form>
+
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+
+        {% if image_url %}
+            <div class="preview">
+                <h3>Vista previa:</h3>
+                <img src="{{ image_url }}" alt="Imagen subida" style="max-width: 400px;">
+            </div>
+        {% endif %}
+
+        {% if result %}
+            
+                <h2>Resultado del análisis:</h2>
+                <ul>
+                    {% for key, value in result.items() %}
+                        <li><strong>{{ key }}:</strong>{{ value }}</li>
+                    {% endfor %}
+                </ul>
+            
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename = 'js/layout.js') }}"></script>    
+{% endblock %}

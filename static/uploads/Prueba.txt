@@ -1,0 +1,7 @@
+Hola mi nombre es Raymon
+Soy de venezuela
+Tengo 19 años
+Estoy desarrollando un programa
+De subida de archivos
+Este archivo es de prueba para que 
+Sea leído por el programa
