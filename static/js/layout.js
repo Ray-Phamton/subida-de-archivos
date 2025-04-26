@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function(){
     const fileNameDisplay = document.getElementById('file-name');
 
     fileInput.addEventListener('change', function(){
-        console.log('archivo seleccionado',fileInput.files);
         if (fileInput.files.length >= 0){
             fileNameDisplay.textContent = fileInput.files[0].name;
         } else {
