@@ -1,5 +1,5 @@
 
-# aplicación de manejo de archivos
+# Aplicación de manejo de archivos
 
 
 Esta es una aplicación web desarrollada en python con el uso de la librería Flask
@@ -8,26 +8,26 @@ Esta es una aplicación web desarrollada en python con el uso de la librería Fl
 
 Desarrollar una aplicación web que permita:
 
-•procesar archivos de texto e imágenes 
+•Procesar archivos de texto e imágenes 
     con soporte para: .txt, .css, .html, .py, .jpg, .jpeg, .png ✅️
 
-•para archivos de texto:
+•Para archivos de texto:
 
-    número de líneas ✅️ 
+    Número de líneas ✅️ 
     
-    número de palabras ✅️ 
+    Número de palabras ✅️ 
     
-    número de carácteres ✅️ 
+    Número de carácteres ✅️ 
     
-    previsualización de los archivos ✅️  
+    Previsualización de los archivos ✅️  
     
-•para archivos de imágen:
+•Para archivos de imágen:
 
-    previsualización del archivo ✅️
+    Previsualización del archivo ✅️
     
-    obtener y mostrar los metadatos(tipo, ancho de la imagen, Largo de la imagen, GPSinfo, hecho, Modelo, Software, Datetime ) ✅️
+    Obtener y mostrar los metadatos(tipo, ancho de la imagen, Largo de la imagen, GPSinfo, hecho, Modelo, Software, Datetime ) ✅️
     
-    en el caso de que la imágen no sea tomada con una cámara ( como captures de pantalla o dibujos) puede que no se muestren metadatos (en desarrollo de solución)
+    En el caso de que la imágen no sea tomada con una cámara ( como captures de pantalla o dibujos) puede que no se muestren metadatos (en desarrollo)
 
 ***YA PUEDES VER LA APP DESPLEGADA AQUÍ***
 
