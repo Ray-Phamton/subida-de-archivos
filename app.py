@@ -22,38 +22,29 @@ def index():
     image_url = None
     error = None
 
-    print("Método de la solicitud:", request.method)  # Debug
-
     if request.method == 'POST':
-        print("Entramos al POST")  # Debug
 
         if 'file' not in request.files:
             error = 'No se seleccionó ningún archivo.'
-            print("No se encontró 'file' en request.files")  # Debug
             return render_template('index.html', error=error)
 
         file = request.files['file']
-        print("Nombre del archivo recibido:", file.filename)  # Debug
 
         if file.filename == '':
-            error = 'Nombre de archivo vacío.'
-            print("Archivo con nombre vacío")  # Debug
+            error = 'Nombre de archivo vacío'
             return render_template('index.html', error=error)
 
         if allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            filepath = os.path.join(app.config['CARGAR_ARCHIVO'], filename)
-            print(f"Guardando archivo en: {filepath}")  # Debug
-
+            filepath = os.path.join(app.config['CARGAR_ARCHIVO'],filename)
+               
             try:
                 file.save(filepath)
-                print("Archivo guardado correctamente.")  # Debug
+                
             except Exception as e:
-                print("Error al guardar archivo:", e)  # Debug
                 error = f"No se pudo guardar el archivo: {str(e)}"
                 return render_template('index.html', error=error)
 
-            # Aquí iría el análisis (omitido para test)
             ext = filename.rsplit('.', 1)[1].lower()
 
             if ext in {'txt', 'html', 'py', 'css'}:
